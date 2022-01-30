@@ -19,6 +19,7 @@ Vue.config.devtools = true;
 const root = new Vue({
     el: '#root',
     data: {
+        newTask:'',
        tasks : [
            {todo: 'spesa', isDone: false},
            {todo: 'sport', isDone: false},
@@ -32,6 +33,14 @@ const root = new Vue({
                 if (i !== index) return true;
                 else return false; 
             });
+        },
+
+        addTask(){
+            const newTask = this.newTask.trim(); 
+            if (newTask) {
+                this.tasks.push({ todo: newTask, isDone: false});
+            }
+            this.newTask='';
         }
     },
 })

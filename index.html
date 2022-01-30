@@ -17,8 +17,8 @@
         <div class="container m-3 text-center ">
             <h1>TODO LIST</h1>
             <div class="container d-flex justify-content-center my-3">
-                <input type="text" id="add-task" class="form-control">
-                <button type="button" id="add-task-btn">Aggiungi</button>
+                <input type="text" v-model="newTask" id="add-task" class="form-control">
+                <button @click="addTask()" type="button" id="add-task-btn">Aggiungi</button>
             </div>
             <div class="container d-flex justify-content-center">
 
