@@ -26,8 +26,12 @@ const root = new Vue({
        ]
     },
      methods: {
-        toggleClass() {
-        this.textClass = this.textClass === 'text-red' ? 'text-blue' : 'text-red';
+        deleteTask(index) {
+            // ^ this.tasks.splice(index, 1);
+            this.tasks = this.tasks.filter((task, i) => {
+                if (i !== index) return true;
+                else return false; 
+            });
         }
     },
 })

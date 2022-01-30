@@ -14,13 +14,19 @@
 
 <body>
     <div id="root">
-        <div class="container m-3 text-center">
+        <div class="container m-3 text-center ">
             <h1>TODO LIST</h1>
+            <div class="container d-flex justify-content-center my-3">
+                <input type="text" id="add-task" class="form-control">
+                <button type="button" id="add-task-btn">Aggiungi</button>
+            </div>
             <div class="container d-flex justify-content-center">
-                <h3 v-if="tasks.length <= 0">La tua lista è vuota.</h3>
+
+                <h3 v-if="tasks.length <= 0" class="m-3">La tua lista è vuota.</h3>
+
                 <ul id="todo-list" class="list-unstyled">
-                    <li v-for="(task, index) in tasks" class="d-flex justify-content-between">{{task.todo}} <button
-                            type="button" class="btn-close"></button></li>
+                    <li v-for="(task, index) in tasks" class="d-flex justify-content-between">{{task.todo}}<button
+                            @click="deleteTask(index)" type="button" class="btn-close"></button></li>
                 </ul>
             </div>
         </div>

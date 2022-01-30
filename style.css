@@ -3,3 +3,11 @@
   padding: 10px;
   width: 600px;
 }
+
+#add-task {
+  width: 400px;
+}
+
+.btn-close {
+  cursor: pointer;
+}
