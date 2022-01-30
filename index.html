@@ -16,10 +16,13 @@
     <div id="root">
         <div class="container m-3 text-center">
             <h1>TODO LIST</h1>
-            <h3 v-if="tasks.length <= 0">La tua lista è vuota.</h3>
-            <ul class="list-unstyled">
-                <li v-for="(task, index) in tasks">{{task.todo}}</li>
-            </ul>
+            <div class="container d-flex justify-content-center">
+                <h3 v-if="tasks.length <= 0">La tua lista è vuota.</h3>
+                <ul id="todo-list" class="list-unstyled">
+                    <li v-for="(task, index) in tasks" class="d-flex justify-content-between">{{task.todo}} <button
+                            type="button" class="btn-close"></button></li>
+                </ul>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
