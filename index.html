@@ -14,9 +14,13 @@
 
 <body>
     <div id="root">
-        <ul>
-            <li v-for="(task, index) in tasks">{{task.todo}}</li>
-        </ul>
+        <div class="container m-3 text-center">
+            <h1>TODO LIST</h1>
+            <h3 v-if="tasks.length <= 0">La tua lista è vuota.</h3>
+            <ul class="list-unstyled">
+                <li v-for="(task, index) in tasks">{{task.todo}}</li>
+            </ul>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
