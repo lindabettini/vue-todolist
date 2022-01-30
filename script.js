@@ -3,7 +3,7 @@
 - done, un booleano (true/false) che indica se il todo è stato fatto oppure no
 MILESTONE 1
 Stampare all'interno di una lista, un item per ogni todo.
-Se la proprietà done è uguale a true, visualizzare il testo del todo sbarrato.
+Se la proprietà done è uguale a true, visualizzare il del todo sbarrato.testo 
 MILESTONE 2
 Visualizzare a fianco ad ogni item ha una "x": cliccando su di essa, il todo viene rimosso dalla lista.
 MILESTONE 3
@@ -43,4 +43,10 @@ const root = new Vue({
             this.newTask='';
         }
     },
+
+        haveBeenDone(index) {
+            this.tasks[index].isDone = !this.tasks[index].isDone;
+        }
+
+        // ° prendere elemento span da dom e aggingere classe text-decoration-line-through solo al clicl
 })

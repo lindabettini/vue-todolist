@@ -25,8 +25,12 @@
                 <h3 v-if="tasks.length <= 0" class="m-3">La tua lista è vuota.</h3>
 
                 <ul id="todo-list" class="list-unstyled">
-                    <li v-for="(task, index) in tasks" class="d-flex justify-content-between">{{task.todo}}<button
-                            @click="deleteTask(index)" type="button" class="btn-close"></button></li>
+                    <li v-for="(task, index) in tasks" class="d-flex justify-content-between">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" @click=""><span
+                            class="text-decoration-line-through">
+                            {{task.todo}}</span><button @click="deleteTask(index)" type="button"
+                            class="btn-close"></button>
+                    </li>
                 </ul>
             </div>
         </div>
